@@ -55,9 +55,27 @@ header{
 main{
   flex: 1 0;
 }
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px auto;
+  max-width: 1050px;
+}
+.card{
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  border: 2px #000 solid;
+}
 .add-big-card{
-  width: 50px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-big-card > img{
+  width: 100px;
+  height: 100px;
 }
 .pop-up{
   display: none;
