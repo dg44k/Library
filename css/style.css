@@ -1,38 +1,39 @@
 @import url(./reset.css);
 
-html,body{
+html,
+body {
   height: 100%;
 }
 
-:root{
+:root {
   font-size: 62.5%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   --common-background: #ccc;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
 }
 
-header{
+header {
   display: flex;
   justify-content: space-around;
   background-color: var(--common-background);
   padding: 15px;
 }
-.logo{
-    font-family: 'Bebas Neue';
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    cursor: pointer;
+.logo {
+  font-family: "Bebas Neue";
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
 }
-.form-search{
+.form-search {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.form-search input{
+.form-search input {
   width: 250px;
   height: 30px;
   border: none;
@@ -40,58 +41,100 @@ header{
   border-radius: 25px;
   padding-left: 15px;
 }
-.form-search input:focus{
+.form-search input:focus {
   outline: 1px solid #7d7d7d;
 }
-.btn-search > img{
+.btn-search > img {
   height: 25px;
   width: 25px;
 }
-.add-logo-up > img{
+.add-logo-up > img {
   height: 40px;
   width: 40px;
   cursor: pointer;
 }
-main{
+main {
   flex: 1 0;
 }
-.container{
+.container {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   margin: 50px auto;
   max-width: 1050px;
 }
-.card{
+.card {
   width: 200px;
   height: 250px;
   border-radius: 10px;
   border: 2px #000 solid;
 }
-.add-big-card{
+.add-big-card {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.add-big-card > img{
+.add-big-card > img {
   width: 100px;
   height: 100px;
 }
-.pop-up{
+.pop-up {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #ebeaea;
+  box-shadow: 3px 3px 5px #a1a1a1, -3px -3px 5px #a1a1a1;
+  position: absolute;
+}
+.pop-up input:not(input[type="checkbox"]) {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  height: 25px;
+}
+.pop-up input:not(input[type="checkbox"]):focus{
+  outline: 1px solid #7d7d7d;
+}
+.pop-up input[type="checkbox"]{
   display: none;
 }
-footer{
+.checkbox-style{
+  display: flex;
+  gap: 10px;
+}
+input[type="checkbox"] + .checkbox-style::before{
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 1px solid #a1a1a1;
+  cursor: pointer;
+}
+.checkbox-style::after input[type="checkbox"]:checked{
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+footer {
   display: flex;
   flex: 0 1;
   justify-content: center;
   background-color: var(--common-background);
   padding: 10px;
 }
-footer img{
+footer img {
   width: 30px;
   height: 30px;
 }
-footer a{
+footer a {
   display: flex;
   align-items: center;
   gap: 8px;
