@@ -63,11 +63,22 @@ main{
   display: none;
 }
 footer{
+  display: flex;
   flex: 0 1;
+  justify-content: center;
   background-color: var(--common-background);
-
+  padding: 10px;
 }
 footer img{
-  height: 10px;
-  width: 10px;
+  width: 30px;
+  height: 30px;
+}
+footer a{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
