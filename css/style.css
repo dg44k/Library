@@ -7,33 +7,65 @@ html,body{
 :root{
   font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
+  --common-background: #ccc;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
 }
 
 header{
   display: flex;
   justify-content: space-around;
+  background-color: var(--common-background);
+  padding: 15px;
 }
 .logo{
     font-family: 'Bebas Neue';
     font-size: 3.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 .form-search{
-
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.form-search input{
+  width: 250px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding-left: 15px;
+}
+.form-search input:focus{
+  outline: 1px solid #7d7d7d;
+}
+.btn-search > img{
+  height: 25px;
+  width: 25px;
+}
+.add-logo-up > img{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+main{
+  flex: 1 0;
 }
 .add-big-card{
   width: 50px;
   height: 50px;
 }
-.btn-search > img{
-  height: 10px;
-  width: 10px;
-}
-.add-logo-up > img{
-  height: 10px;
-  width: 10px;
-}
 .pop-up{
   display: none;
+}
+footer{
+  flex: 0 1;
+  background-color: var(--common-background);
+
 }
 footer img{
   height: 10px;
