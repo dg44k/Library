@@ -1,29 +1,29 @@
+const titleBook = document.getElementById("title");
+const authorBook = document.getElementById("author");
+const pagesBook = document.getElementById("pages");
+const genreBook = document.getElementById("genre");
+const checkReadBook = document.getElementById("check-read");
+const buttonSubmit = document.querySelector(".btn-submit");
 let myLibrary = [];
 
-function Book(title, 
-              author,
-              pages,
-              genre,
-              statusRead) {
+buttonSubmit.addEventListener("click", addBookToLibrary);
+
+function Book(title, author, pages, genre, statusRead) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.genre = genre;
-  this.statusRead = statusRead;  
+  this.statusRead = statusRead;
 }
 
-function addBookToLibrary() {
-  let title = ;
-  let author = ;
-  let pages = ;
-  let genre = ;
-  let statusRead = ;
+function addBookToLibrary(event) {
+  let title = titleBook.value;
+  let author = authorBook.value;
+  let pages = pagesBook.value;
+  let genre = genreBook.value;
+  let statusRead = checkReadBook.value;
 
-  let newBook = new Book(title, 
-                         author,
-                         pages,
-                         genre,
-                         statusRead);
-                    
-
+  let newBook = new Book(title, author, pages, genre, statusRead);
+  myLibrary.push(newBook);
+  event.preventDefault();
 }
