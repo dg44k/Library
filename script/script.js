@@ -42,6 +42,7 @@ function addBookToLibrary(event) {
   let newCard = document.createElement("div");
   parentCards.insertBefore(newCard, parentCards.firstChild);
   newCard.classList.add('card');
+  
   event.preventDefault();
 }
 
