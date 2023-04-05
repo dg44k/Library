@@ -37,7 +37,13 @@ function addBookToLibrary(event) {
 
   let newBook = new Book(title, author, pages, genre, statusRead);
   myLibrary.push(newBook);
+
   popUp.style.display = "none";
+  titleBook.value = null;
+  authorBook.value = null;
+  pagesBook.value = null;
+  genreBook.value = null;
+  checkReadBook.value = null;
 
   let newCard = document.createElement("div");
   parentCards.insertBefore(newCard, parentCards.firstChild);
