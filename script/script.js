@@ -5,16 +5,18 @@ const genreBook = document.getElementById("genre");
 const checkReadBook = document.getElementById("check-read");
 const buttonSubmit = document.querySelector(".btn-submit");
 const buttonAddCard = document.querySelector(".add-big-card");
+const miniButtonAddCard = document.querySelector(".add-logo-up");
 const popUp = document.querySelector(".pop-up");
 const parentCards = document.querySelector(".container")
 let myLibrary = [];
 
+miniButtonAddCard.addEventListener("click", addCard);
 buttonSubmit.addEventListener("click", addBookToLibrary);
 buttonAddCard.addEventListener("click", addCard);
-popUp.addEventListener("click", (event) => {
-      event.stopPropagation();
+popUp.addEventListener("mousedown", (event) => {
+  event.stopPropagation();
 });
-document.addEventListener("click", (event) => {
+document.addEventListener("mousedown", (event) => {
   if (event.currentTarget != popUp) {
     popUp.style.display = "none";
   }
@@ -48,6 +50,7 @@ function addBookToLibrary(event) {
   let newCard = document.createElement("div");
   parentCards.insertBefore(newCard, parentCards.firstChild);
   newCard.classList.add('card');
+  newCard.classList.add("card-library");
   
   event.preventDefault();
 }
@@ -55,4 +58,7 @@ function addBookToLibrary(event) {
 function addCard(event) {
     popUp.style.display = "flex";
     event.stopPropagation();
+}
+function setStyleCardLibrary(){
+  
 }
