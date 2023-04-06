@@ -143,12 +143,39 @@ button[type="submit"] {
 .card-library{
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
   padding: 10px;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   background-color: #ebeaea;
+}
+.btnReadCard{
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;  
+  opacity: 0.8;
+  color: #fff;
+}
+.btnReadCard:hover{
+  transition: ease-in-out .9ms;
+  opacity: 1;
+}
+.btnDeleteCard{
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;  
+  opacity: 0.8;
+  background-color: #dd3a25; 
+  color: #fff;
+}
+.btnDeleteCard:hover{
+  transition: ease-in-out .9ms;
+  opacity: 1;
 }
 footer {
   display: flex;
