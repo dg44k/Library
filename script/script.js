@@ -22,12 +22,14 @@ document.addEventListener("mousedown", (event) => {
   }
 });
 
-function Book(title, author, pages, genre, statusRead) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.genre = genre;
-  this.statusRead = statusRead;
+class Book {
+  constructor(title, author, pages, genre, statusRead) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.genre = genre;
+    this.statusRead = statusRead;
+  }
 }
 
 function addBookToLibrary(event) {
